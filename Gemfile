@@ -64,7 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # jquery for bootstrap
 gem 'jquery-rails'
 
-# adding bootstrap for its nice layout features
+# add bootstrap for its nice layout features
 gem 'popper_js', '~> 1.14.5'
 gem 'bootstrap', '~> 4.3.1'
 
@@ -72,8 +72,12 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
-# adding kaminari pagination gem
+# add kaminari pagination gem
 gem 'kaminari'
 
-# adding simple form gem for the user interface
+# add simple form gem for the user interface
 gem 'simple_form'
+
+# add font awesome gem
+gem "font-awesome-rails"
+
