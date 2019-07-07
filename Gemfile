@@ -74,3 +74,6 @@ end
 
 # adding kaminari pagination gem
 gem 'kaminari'
+
+# adding simple form gem for the user interface
+gem 'simple_form'
