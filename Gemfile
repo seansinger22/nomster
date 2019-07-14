@@ -84,3 +84,8 @@ gem "font-awesome-rails"
 # add authentication gem Devise
 gem 'devise'
 
+# add a geo coder to translate the addresses
+gem "geocoder"
+
+# add figaro to hide the API key
+gem "figaro"
