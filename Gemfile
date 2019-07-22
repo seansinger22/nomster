@@ -92,3 +92,6 @@ gem "figaro"
 
 # add file upload gem for uploading photos
 gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
+
+# add this gem to link to AWS S3 bucket
+gem 'fog-aws'
