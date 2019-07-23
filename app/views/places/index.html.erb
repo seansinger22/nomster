@@ -19,24 +19,21 @@
         </blockquote>
       </div>
     <% end %>
+
+    <% if place.photos.present? %>
+      <div class="col-12 col-sm-6">
+        <blockquote>
+          <%= image_tag(place.photos.last.picture.url, :size => "360x260") %>
+          <br />
+          <%= place.photos.last.caption %>
+          <br />
+          <br />
+          <small><%= place.photos.last.user.email %></small>
+        </blockquote>
+      </div>
+    <% end %>
+
   </div>
 <% end %>
 
 <%= paginate @places %>
-
-<div class="row">
-  <% @place.photos.each do |photo| %>
-    <% if place.photo.present? %>
-      <div class="col-12 col-sm-6">
-        <blockquote>
-          <%= image_tag(photo.picture.url, :size => "360x260") %>
-          <br />
-          <%= photo.caption %>
-          <br />
-          <br />
-          <small><%= photo.user.email %></small>
-        </blockquote>
-      </div>
-    <% end %>
-  <% end %>
-</div>
