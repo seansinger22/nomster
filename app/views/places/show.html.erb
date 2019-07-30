@@ -127,19 +127,19 @@
 
 <div class="clear"></div>
 
-  <div class="row">
-    <% @place.photos.each do |photo| %>
-      <% if photo.picture.present? %>
-        <div class="col-12 col-sm-6">
-          <blockquote>
-            <%= image_tag(photo.picture.url, :size => "360x260") %>
-            <br />
-            <%= photo.caption %>
-            <br />
-            <br />
-            <small><%= photo.user.email %></small>
-          </blockquote>
-        </div>
-      <% end %>
+<div class="row">
+  <% @place.photos.each do |photo| %>
+    <% if photo.picture.present? %>
+      <div class="col-12 col-sm-6">
+        <blockquote>
+          <%= image_tag(photo.picture.url, :size => "360x260") %>
+          <br />
+          <%= photo.caption %>
+          <br />
+          <br />
+          <small><%= photo.user.email %></small>
+        </blockquote>
+      </div>
     <% end %>
-  </div>
+  <% end %>
+</div>
