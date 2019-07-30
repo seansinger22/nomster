@@ -20,12 +20,13 @@
 <div class ="row">
   <% @user.comments.each do |comment| %>
     <div class="col-12 col-sm-6">
-        <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
         <blockquote>
           <% if comment.humanized_rating.present? %>
             <b><%= comment.humanized_rating %></b> - 
           <% end %>
           <%= comment.message %>
+          <br/>
+          <br/>
           <small><%= comment.user.email %></small>
         </blockquote>
       </div>
@@ -77,17 +78,21 @@
             <b><%= place.comments.last.humanized_rating %></b> - 
           <% end %>
           <%= place.comments.last.message %>
+          <br/>
+          <br/>
           <small><%= place.comments.last.user.email %></small>
         </blockquote>
       </div>
     <% end %>
 
-    <% if place.photos.present? %>
+    <% if place.photos.last.present? %>
       <div class="col-12">
         <blockquote>
           <%= image_tag(place.photos.last.picture.url, :size => "360x260") %>
+          <br/>
           <%= place.photos.last.caption %>
-          <br />
+          <br/>
+          <br/>
           <small><%= place.photos.last.user.email %></small>
         </blockquote>
       </div>
