@@ -5,10 +5,10 @@
     </div>
 
     <div class="col-8">
-      <h4><%= @user.email %></h4>
-      <h4>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h4>
-      <h4><%= @user.comments.count %> total comments</h4>
-      <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
+      <h5><%= @user.email %></h5>
+      <h5>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h5>
+      <h5><%= @user.comments.count %> total comments</h5>
+      <h5><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h5>
     </div>
   </div>
   <div class="clear"></div>
@@ -90,7 +90,7 @@
     <% if place.photos.last.present? %>
       <div class="col-12">
         <blockquote>
-          <%= image_tag(place.photos.last.picture.url, :size => "300x200") %>
+          <%= image_tag(place.photos.last.picture.url, :size => "270x170") %>
           <br/>
           <%= place.photos.last.caption %>
           <br/>
