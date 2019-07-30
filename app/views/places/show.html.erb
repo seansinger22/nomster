@@ -107,6 +107,8 @@
           <b><%= comment.humanized_rating %></b> - 
         <% end %>
         <%= comment.message %>
+        <br/>
+        <br/>
         <small><%= comment.user.email %></small>
       </blockquote>
     </div>
@@ -127,7 +129,7 @@
 
   <div class="row">
     <% @place.photos.each do |photo| %>
-      <% if photo.picture.url %>
+      <% if photo.picture.present? %>
         <div class="col-12 col-sm-6">
           <blockquote>
             <%= image_tag(photo.picture.url, :size => "360x260") %>
