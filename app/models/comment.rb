@@ -19,4 +19,6 @@ class Comment < ApplicationRecord
     NotificationMailer.comment_added(self).deliver_now
   end
 
+  validates :message, presence: true
+  validates :rating, presence: true
 end
