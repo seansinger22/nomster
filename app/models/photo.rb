@@ -4,5 +4,5 @@ class Photo < ApplicationRecord
   mount_uploader :picture, PictureUploader
 
   validates :caption, presence: true
-  validates :photo, presence: true
+  validates :picture, presence: true
 end
